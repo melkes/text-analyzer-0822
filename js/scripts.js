@@ -20,6 +20,16 @@ function wordCounter(text) {
   return wordCount;
 }
 
+// function arrayDeduplicator(array) {
+//   let deduplicatedArray = [];
+//   array.forEach(function(element) {
+//     if (!deduplicatedArray.includes(element)) {
+//       deduplicatedArray.push(element)
+//         } 
+//     return deduplicatedArray
+//   })
+// }
+
 function numberOfOccurrencesInText(word, text) {
   if (isEmpty(word)) {
     return 0;
@@ -84,6 +94,8 @@ function wordCountList(text) {
     occArrayArray.push(wordOccurance);
     occuranceArray.push(occArrayArray);
 	});
+  // const deduplicatedArray = arrayDeduplicator(occuranceArray)
+  // return deduplicatedArray
   return occuranceArray
 }
 // remove repeat instances from array
