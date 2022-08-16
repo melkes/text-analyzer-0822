@@ -70,16 +70,25 @@ function boldPassage(word, text) {
   });
   return p;
 }
-
+// populate array with words and word counts
 function wordCountList(text) {
-	if (isEmpty(text)){
-		return null
+  if (isEmpty(text)){
+    return null
 	}
 	const textArray = text.split(" ");
+  const occuranceArray = [];
 	textArray.forEach(function(element){
-		
-	}
+    const wordOccurance	= numberOfOccurrencesInText(element, text);
+    const occArrayArray = [];
+    occArrayArray.push(element);
+    occArrayArray.push(wordOccurance);
+    occuranceArray.push(occArrayArray);
+	});
+  return occuranceArray
 }
+// remove repeat instances from array
+// reorder elements based on its number
+// put the resulting items in ol
 
 function handleFormSubmission() {
   event.preventDefault();
@@ -95,6 +104,7 @@ function handleFormSubmission() {
   } else {
     document.querySelector("div#bolded-passage").innerText = null;
   }
+
 }
 
 window.addEventListener("load", function() {

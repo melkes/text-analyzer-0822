@@ -124,3 +124,5 @@ Code
 const text = "";
 wordCountList(text);
 Expected Output: null
+
+Test: "
